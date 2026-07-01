@@ -1,0 +1,56 @@
+{
+  "name": "cyber-city-light",
+  "displayName": "Cyber City Light",
+  "description": "A vibrant Cyberpunk-inspired color theme suite for VS Code, featuring light and dark modes.",
+  "version": "1.0.0",
+  "publisher": "sailorlabs-in",
+  "author": "sailorlabs.in",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sailorlabs-in/cyber-city-light"
+  },
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "scripts": {
+    "package": "npx @vscode/vsce package"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "cyberpunk",
+    "cyberpunk-theme",
+    "light theme",
+    "dark theme",
+    "retro",
+    "color theme",
+    "sailorlabs"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Cyber City Light",
+        "uiTheme": "vs",
+        "path": "./themes/cyber-city-light.json"
+      },
+      {
+        "label": "Cyber City Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-city-dark.json"
+      },
+      {
+        "label": "Cyber City Dusk",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-city-dusk.json"
+      },
+      {
+        "label": "Cyber City Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cyber-city-midnight.json"
+      }
+    ]
+  }
+}
