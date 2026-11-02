@@ -11,10 +11,29 @@
     "type": "git",
     "url": "https://github.com/sailorlabs-in/cyber-city-light"
   },
+  "homepage": "https://github.com/sailorlabs-in/cyber-city-light#readme",
+  "bugs": {
+    "url": "https://github.com/sailorlabs-in/cyber-city-light/issues"
+  },
+  "qna": "marketplace",
+  "galleryBanner": {
+    "color": "#171520",
+    "theme": "dark"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
   "engines": {
     "vscode": "^1.40.0"
   },
   "scripts": {
+    "build": "node scripts/update-themes.js",
+    "vscode:prepublish": "npm run build",
+    "build": "node scripts/update-themes.js",
+    "vscode:prepublish": "npm run build",
     "package": "npx @vscode/vsce package"
   },
   "categories": [
@@ -27,6 +46,9 @@
     "dark theme",
     "retro",
     "color theme",
+    "neon",
+    "web",
+    "vscode-theme",
     "sailorlabs"
   ],
   "contributes": {

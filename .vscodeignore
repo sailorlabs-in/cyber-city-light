@@ -1,4 +1,9 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+*.vsix
+BANNER.png
+CONTRIBUTING.md
+scripts/**
+.github/**
 vsc-extension-quickstart.md

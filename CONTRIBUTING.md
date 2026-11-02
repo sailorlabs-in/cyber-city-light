@@ -14,17 +14,27 @@ If you've spotted a bug (e.g., text that is hard to read in a specific language)
 ### 2. Local Setup
 1. Fork and clone the repository.
 2. Open the project in VS Code.
-3. Install dependencies (if any).
-4. Run the extension in the Extension Development Host (`F5` or via the Debug panel) to visually inspect your changes.
+3. Run the extension in the Extension Development Host (`F5` or via the Run & Debug panel) to visually inspect your changes in real time.
 
 ### 3. Modifying Themes
-* Cyber City Light uses static JSON theme files located in the `themes/` folder.
-* When editing the light theme (`cyber-city-light.json`), ensure all colors maintain high contrast and legibility on the light background.
-* Avoid using pure primary/neon colors directly in light mode text tokens, as they are hard to read on light backgrounds. Always use their darkened, high-contrast equivalents.
+* Cyber City Light uses declarative, static JSON theme files located in the `themes/` folder.
+* **Web IDE Compatibility**: This extension is 100% web-compatible (`vscode.dev`, `github.dev`). Do **not** introduce any Node.js runtime code, native dependencies, or experimental DOM/CSS injections into the extension.
+* To apply bulk token updates across all themes, edit [scripts/update-themes.js](file:///d:/Workspace/POCS/cyber-city/scripts/update-themes.js) and run:
+  ```bash
+  npm run build
+  ```
+* When editing the light theme (`cyber-city-light.json`), ensure all colors maintain high contrast and legibility (WCAG AA compliant) on the light background.
+* Avoid using pure neon colors directly in light mode text tokens; use their darkened, high-contrast equivalents instead.
 
-### 4. Submit a Pull Request
+### 4. Verify & Package
+Before submitting a PR, verify packaging succeeds without warnings:
+```bash
+npm run package
+```
+
+### 5. Submit a Pull Request
 1. Create a new branch for your changes (e.g., `feature/improve-rust-syntax`).
-2. Make your edits and build the extension using `vsce package` to verify packaging succeeds.
+2. Make your edits and ensure `npm run package` succeeds.
 3. Push to your fork and submit a Pull Request.
 4. **Please include before/after screenshots** of code snippets showing your improvements.
 
